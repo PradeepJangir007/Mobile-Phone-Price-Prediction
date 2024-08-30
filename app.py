@@ -4,7 +4,7 @@ import numpy as np
 
 import pickle
 df=pickle.load(open('df.pkl','rb'))
-model=pickle.load(open('samart_phone_price.pkl','rb'))
+model=pickle.load(open('samart_phone_price_with_RFR.pkl','rb'))
 st.title('smart_phone_price_prediction')
 st.subheader('give some information about smart phone')
 st.markdown('Note: yes = 1 ,No = 0')
@@ -23,6 +23,7 @@ Processor=st.selectbox('Processor',df.Processor_.unique())
 disply=st.text_input('Display resulation')
 size=st.text_input('Display size')
 Ram=st.text_input('Ram','GB')
+Processor_series=st.text_input('Processor_series')
 External_Memory=st.text_input('External_Memory','GB')
 Inbuilt_memory=st.text_input('Inbuilt_memory','GB')
 fast_charging=st.text_input('fast_charging','Watt')
@@ -44,11 +45,11 @@ if b==True:
         'Dual Display':[int(Dual_Displayd)],'External_Memory':[int(External_Memory)],
         'company':[Brand],'Inbuilt_memory':[int(Inbuilt_memory)],'fast_charging':[float(fast_charging)],
         'Water Drop Notch':[int(Water_Drop_Notch)],'with Punch Hole':[int(with_Punch_Hole)],
-        'Processor_':[Processor],'No _of_Rear':No_of_Rear,'No _of_Front':[int(No_of_Front)],
+        'Processor_':[Processor],'Processor_series':[int(Processor_series)],'No _of_Rear':No_of_Rear,'No _of_Front':[int(No_of_Front)],
         'Primary_rear_camera':[Primary_rear_camera],'Primary_front_camera':[Primary_front_camera],
         'Number_of_core':[Number_of_core],
-        'pixal_D':[pixal_D],'PPI':[PPI],
+        'PPI':[PPI],
     }
     x=pd.DataFrame(x)
     print(x)
-    st.title('price ' +str(round(10**((model.predict(x))[0]))))
+    st.title('price ' +str(round(2.7183**((model.predict(x))[0]))))
