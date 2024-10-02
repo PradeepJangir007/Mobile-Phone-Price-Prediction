@@ -69,7 +69,7 @@ smart_phone_price_prediction/
 Clone the repository:
 ```python
 git clone https://github.com/PradeepJangir007/Mobile-Phone-Price-Prediction.git
-cd smart-phone-price-prediction
+cd Mobile-Phone-Price-Prediction
 ```
 ## Run the Streamlit app:
 ```python
