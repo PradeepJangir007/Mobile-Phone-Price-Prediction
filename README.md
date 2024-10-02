@@ -68,7 +68,7 @@ smart_phone_price_prediction/
 ## Installation
 Clone the repository:
 ```python
-git clone https://github.com/yourusername/smart-phone-price-prediction.git
+git clone https://github.com/PradeepJangir007/smart-phone-price-prediction.git
 cd smart-phone-price-prediction
 ```
 ## Run the Streamlit app:
