@@ -3,6 +3,5 @@ pandas
 scikit-learn
 matplotlib
 streamlit
-pickle
 scipy
 seaborn
