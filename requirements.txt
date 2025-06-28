@@ -3,6 +3,6 @@ pandas
 scikit-learn
 matplotlib
 streamlit
-scipy
+scipy==1.13.1
 seaborn
-statsmodels 
+statsmodels==0.14.2
